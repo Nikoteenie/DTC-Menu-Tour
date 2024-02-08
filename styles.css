@@ -261,6 +261,9 @@ h3, .main-category a {
   .menu-ham {
     display: block;
   }
+	.search-row {
+		padding-left: 20px
+	}
   button .one-rated-desktop {
     display: none;
   }
@@ -299,6 +302,9 @@ h3, .main-category a {
   .mobile-logo {
     display: block;
   }
+	.search-row {
+		padding-left: 20px
+	}
   .desktop-icons {
     display: none
   }
