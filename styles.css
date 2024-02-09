@@ -99,7 +99,7 @@ div.exposed-menu a:hover {
   font-weight: bolder;
 }
 div.exposed-menu-mobile a {
-	margin: 10px 0 10px;
+	margin-top: 10px;
   display: inline-block;
   color: var(--dark-blue);
   text-decoration: none;
