@@ -10,6 +10,12 @@ body {
   font-family: 'Roboto', sans-serif;
 
 }
+
+.banner {
+	background-color: #a41e36;
+	font-weight: 500;
+	font-size: 14px
+}
 /*NAVBAR*/
 .btn:focus {
   outline: -webkit-focus-ring-color auto 2px !important;
