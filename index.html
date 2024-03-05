@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DtC Menu Proposal</title>
+<title>DtC 02 Menu Proposal</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 <link rel="stylesheet" href="styles.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 <script src="https://kit.fontawesome.com/73ffcbdb91.js" crossorigin="anonymous"></script>
+<script src="menu.js"></script>
 </head>
 
 <body>
@@ -21,9 +22,30 @@
     <div class="col-12 col-lg-6 p-0" >
       <div class="row justify-content-center">
         <div class=" search-row d-flex justify-content-end align-items-top ">
+          
           <button class="mobile-menu"  type="button" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"> <i class="fs-4 fa-solid fa-bars"></i>
-          <div class="fs-6 menu m-0 mt-lg-1">Menu</div>
-          </button>
+           
+            <div class="fs-6 menu m-0 mt-lg-1">Menu
+   
+
+          </div>
+           </button>
+           <span id="tooltip" class="tooltip2">
+          <span class="tooltiptext pt-3 px-4">
+
+
+          We have made some changes to our site. Feel free to explore on your own or take a tour!
+          <hr class="mt-2">
+        <div class="mt-2">
+          <span class="fs-6 btn tooltip-dismiss" onClick="hideToolTip()">Dismiss</span>
+<span class="fs-6 btn tooltip-btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onClick="hideToolTip()">Take Tour</span>
+
+
+        </div>
+        
+        </span>
+         
+        </span>
           <div>
             <div class=" form border-light container-fluid m-0">
               <div class="input-group">
@@ -35,7 +57,46 @@
               </div>
             </div>
           </div>
-			   
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title " id="staticBackdropLabel">New Menu: Tour</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p id="txt" class="text-start">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip eprehenderit in.<p>
+        <div class="row">
+          <div class="col-2 text-center mt-10">
+            <button id="bck" onclick="back()" disabled><i class="fa-solid fa-caret-right"></i></button>
+          </div>
+          
+          <div class="col text-center">
+            <img id="slide" class="img-fluid" src="https://auth.lifeextension.com/-/media/lifeextension/scratch/1.jpg" height="360" />
+
+          </div>
+          <div class="col-2 text-center mt-10">
+            <button id="fwd" onclick="forward()"><i class="fa-solid fa-caret-right"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="my-modal-footer">
+        <div class="row">
+        <div class="col-3"></div>
+          <div class="col-6 text-center">
+            <h4 class="page-number"><span id="num">1</span> of 4</h4>
+          </div>
+          <div class="col-3 text-right"><button type="button" class="end-btn" data-bs-dismiss="modal">End Tour</button></div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+         <!-- /MODAL -->
 			
 <!--		  MOBILE-->
           <img class="d-lg-none one-rated-mobile" src="rated.png" alt="" role="presentation" height="45">
@@ -388,4 +449,5 @@
 	
 	
 </body>
+
 </html>
