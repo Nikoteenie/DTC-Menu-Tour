@@ -4,10 +4,152 @@
   --light-blue: #0D95A5;
   --orange: #fa6100;
 }
+
+/* TOUR */
+.tooltip2 {
+  position: relative;
+
+}
+
+.tooltip2 .tooltiptext {
+  display: block;
+  background-color: white;
+  visibility: visible;
+  width: 280px;
+line-height: 1.25;
+  color: var(--dark-blue);
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 30%;
+  margin-left: -150px;
+  border: 2px solid var(--dark-blue);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation: mymove 1s 3;
+}
+
+.tooltip2 .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom:100%;
+  left: 34%;
+  margin-left: 15px;
+  border-width: 12px;
+  border-style: solid;
+  border-color: transparent transparent var(--dark-blue) transparent;
+
+}
+
+span .tooltip-btn {
+  background-color: var(--dark-blue);
+  color: white;
+  border: 2px solid var(--dark-blue);
+  margin-top: 3px;
+}
+
+span .tooltip-dismiss {
+  color: var(--dark-blue);
+}
+
+.tooltip-dismiss:hover{
+  font-weight: 500;
+}
+
+.tooltip-btn:hover {
+  border: 2px solid var(--dark-blue) !important;
+  font-weight: 500;
+}
+
+@keyframes mymove {
+  0%   { top:100%;}
+  50% { top:70%;}
+  100%   { top:100%;}
+}
+/* /TOUR */
+
+
+/* Modal: Tour */
+#txt {
+  height: 6rem;  
+}
+.mt-10 {margin-top: 10rem;}
+.my-modal-footer {
+    padding: 0.75rem;
+    border-top: 1px solid #dee2e6;
+    border-bottom-right-radius: calc(0.3rem - 1px);
+    border-bottom-left-radius: calc(0.3rem - 1px);
+}
+.modal-header {
+ color: white;
+  background-color:  #0e2d52;
+}
+.close {
+  color:white !important;
+}
+#bck, #fwd{
+  background-color: #0e2d52;
+  color: white;
+  border:1px solid #0e2d52;
+  border-radius: 5px;
+  padding: 0px 10px 0px 10px;
+  font-size: 25px;
+}
+#bck {
+    transform: scale(-1, 1);
+}
+#bck:hover {
+  color: #0e2d52;
+  background-color: white;
+  border: 2px solid #0e2d52;
+}
+#fwd:hover {
+  color: #0e2d52;
+  background-color: white;
+  border: 2px solid #0e2d52;
+}
+#bck:disabled{
+  color:#e7e7e7;
+  background-color: grey;
+  border: 2px solid grey;
+}
+#fwd:disabled{
+  color:#e7e7e7;
+  background-color: grey;
+  border: 2px solid grey;
+}
+#slide {
+  border: 1px solid #0e2d52;
+  border-radius: 5px;
+}
+.page-number {
+  font-size: 1rem;
+  color: #0e2d52;
+}
+.end-btn {
+  color: #0e2d52;
+  background-color: white;
+  border:2px solid #0e2d52;
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+.end-btn:hover {
+  color: white;
+  background-color: #0e2d52;
+  border:2px solid #0e2d52;
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+/* /Modal: Tour */
+
 body {
-  background: white;
+  background:white;
   background-position: center bottom;
   font-family: 'Roboto', sans-serif;
+
 }
 
 .banner {
@@ -15,8 +157,6 @@ body {
 	font-weight: 500;
 	font-size: 14px
 }
-
-
 /*NAVBAR*/
 .btn:focus {
   outline: -webkit-focus-ring-color auto 2px !important;
@@ -37,7 +177,7 @@ body {
   background-color: var(--light-blue);
 }
 .mobile-menu:hover {
-  background: #e7e7e7;
+  background: white;
   border: 2px solid var(--dark-blue);
   color: var(--dark-blue)
 }
@@ -68,7 +208,7 @@ body {
 .search-button:hover {
   border: 2px solid var(--dark-blue) !important;
   color: var(--dark-blue) !important;
-  background: #e7e7e7 !important;
+  background: white !important;
 }
 .search-button:focus {
   outline: -webkit-focus-ring-color auto 1px !important;
@@ -80,6 +220,7 @@ body {
   background: var(--light-blue);
 }
 .one-rated {
+ 
   font-size: 12px;
   color: var(--dark-blue);
   line-height: 1.3;
@@ -258,11 +399,6 @@ h3, .main-category a {
   min-width: 60px;
 }
 @media (max-width: 350px) {
-	
-	.banner {
-		display:none;
-	}
-	
 	.main-background {
 		display:none;
 	}
@@ -294,12 +430,13 @@ h3, .main-category a {
 }
 /*// Small devices (landscape phones, 576px and up)*/
 @media (max-width: 576px) {
+
+  .tooltip2 .tooltiptext {
+    display: none;
+  }
 	.main-background {
 		display:none;
 	}
-	
-
-	
   .header-container {
     padding: 5px 20px 0 20px!important;
     background-color: white;
@@ -348,7 +485,9 @@ h3, .main-category a {
 }
 /*// Medium devices (tablets, 768px and up)*/
 @media (max-width: 768px) {
-
+  .tooltip2 .tooltiptext {
+    display: none;
+  }
   .header-container {
     padding: 5px 20px 0 20px!important;
 	  background-color: white;
