@@ -5,7 +5,25 @@
   --orange: #fa6100;
 }
 
+
+
 /* TOUR */
+
+#tour-link {
+  display: none;
+}
+
+#tour-link {
+  border: none;
+  box-shadow: 1px 2px 0px 1px rgba(0,0,0,.15);
+  /* border: 1px solid var(--dark-blue); */
+  border-radius: 5px;
+  font-size: 0.8750em;
+  color: var(--dark-blue);
+  background-color: #E6F6F7;
+
+}
+
 .tooltip2 {
   position: relative;
 
@@ -73,12 +91,12 @@ span .tooltip-dismiss {
 
 /* Modal: Tour */
 #txt {
-  height: 6rem;  
+  height: 3rem;  
 }
 .mt-10 {margin-top: 10rem;}
 .my-modal-footer {
     padding: 0.75rem;
-    border-top: 1px solid #dee2e6;
+    /* border-top: 1px solid #dee2e6; */
     border-bottom-right-radius: calc(0.3rem - 1px);
     border-bottom-left-radius: calc(0.3rem - 1px);
 }
@@ -86,61 +104,95 @@ span .tooltip-dismiss {
  color: white;
   background-color:  #0e2d52;
 }
+
 .close {
   color:white !important;
 }
 #bck, #fwd{
-  background-color: #0e2d52;
-  color: white;
-  border:1px solid #0e2d52;
-  border-radius: 5px;
-  padding: 0px 10px 0px 10px;
-  font-size: 25px;
+  background-color: white;
+  color: var(--dark-blue);
+  /* border:1px solid #0e2d52; */
+  border: 2px solid var(--dark-blue) ;
+  border-radius: 50%;
+  padding: 0 9px;
+  font-size: 1.2rem;
 }
+
+.fwd-txt {
+  background-color: white;
+  color: var(--dark-blue);
+
+  border: 2px solid var(--dark-blue) ;
+  border-radius: 50%;
+  padding: 2px 6px;
+  margin: 0px 3px;
+  font-size: 18px;
+}
+
 #bck {
     transform: scale(-1, 1);
 }
 #bck:hover {
-  color: #0e2d52;
-  background-color: white;
-  border: 2px solid #0e2d52;
+  color: white;
+  background-color: var(--dark-blue);
+
 }
 #fwd:hover {
-  color: #0e2d52;
-  background-color: white;
-  border: 2px solid #0e2d52;
+  color: white;
+  background-color: var(--dark-blue);
+
 }
 #bck:disabled{
   color:#e7e7e7;
   background-color: grey;
   border: 2px solid grey;
+ 
 }
 #fwd:disabled{
   color:#e7e7e7;
   background-color: grey;
-  border: 2px solid grey;
+  border: 2px solid grey; 
 }
 #slide {
   border: 1px solid #0e2d52;
   border-radius: 5px;
+  max-height: 450px;
 }
 .page-number {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #0e2d52;
 }
 .end-btn {
-  color: #0e2d52;
-  background-color: white;
+  color: white;
+  background-color: var(--dark-blue);
   border:2px solid #0e2d52;
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+.end-btn:hover {
+  color: var(--dark-blue);
+  background-color: white;
+  border:2px solid var(--dark-blue);
   padding: 2px 6px;
   border-radius: 5px;
 }
-.end-btn:hover {
-  color: white;
-  background-color: #0e2d52;
-  border:2px solid #0e2d52;
-  padding: 2px 6px;
-  border-radius: 5px;
+
+#end:disabled{
+  color:#e7e7e7;
+  background-color: grey;
+  border: 2px solid grey;
+}
+
+.contact-link {
+  color: var(--light-blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.my-modal-footer {
+  background-color: #e7e7e7;
+  margin-top: 20px;
 }
 
 /* /Modal: Tour */
@@ -166,8 +218,6 @@ body {
   padding: 15px 0 10px;
   margin: 0px auto;
 }
-
-
 
 .mobile-menu {
   max-height: 45px;
