@@ -91,7 +91,7 @@ span .tooltip-dismiss {
 
 /* Modal: Tour */
 #txt {
-  height: 3rem;  
+  height: 60px;  
 }
 .mt-10 {margin-top: 10rem;}
 .my-modal-footer {
@@ -166,7 +166,7 @@ span .tooltip-dismiss {
   color: white;
   background-color: var(--dark-blue);
   border:2px solid #0e2d52;
-  padding: 2px 6px;
+  padding: 4px 20px;
   border-radius: 5px;
   font-size: 1.2rem;
 }
@@ -174,7 +174,7 @@ span .tooltip-dismiss {
   color: var(--dark-blue);
   background-color: white;
   border:2px solid var(--dark-blue);
-  padding: 2px 6px;
+  
   border-radius: 5px;
 }
 
