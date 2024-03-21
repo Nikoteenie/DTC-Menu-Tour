@@ -75,7 +75,7 @@ function back() {
 function reset(){
   GLOBAL_CUR=0;
     localStorage.setItem("cur", 0);
-    document.getElementById('txt').innerHTML = slides[0].slide+". "+slides[0].info;
+    document.getElementById('txt').innerHTML = slides[0].info;
     document.getElementById('num').textContent = slides[0].slide;
     document.getElementById('slide').src = "slide-" + slides[0].slide + ".jpg";
     document.getElementById('bck').disabled = true;
