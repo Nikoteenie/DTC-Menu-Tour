@@ -85,14 +85,14 @@
             <button id="bck" onclick="back()" disabled><i class="fa-solid fa-caret-right"></i></button>
           </div>
           <div class="col-3  p-0">
-            <h4 class="page-number m-0"><span id="num">1</span> of 8</h4>
+            <h4 class="page-number m-0"><span id="num">1</span> of <span id="num_2">8</span></h4>
           </div>
           <div class="col-2 text-start p-0">
             <button id="fwd" class="fwd" onclick="forward()"><i class="fa-solid fa-caret-right"></i></button>
          
           </div>
-          <div class="col"></div>
-          <div class="col-3 text-start py-0 px-3"><button id ="end" type="button" class="end-btn" data-bs-dismiss="modal" onclick="showTourLink()" disabled>Finish</button></div>
+          
+          <div class="col-4 text-start py-0 px-3"><button id ="end" type="button" class="end-btn" data-bs-dismiss="modal" onclick="showTourLink()" disabled>Finish</button></div>
           </div>
         </div>
         <!-- <hr class="mt-3"> -->
@@ -144,7 +144,7 @@
 
 
       <!-- TOUR LINK -->
-      <button class="p-1 mt-1 w-100" id="tour-link"  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onClick="hideToolTip()">We made changes! Take a tour!</button>
+      <button class="p-1 mt-1 w-100" id="tour-link"  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onClick="reset()">We made changes! Take a tour!</button>
     </div>
 	  <!-- /TOUR LINK -->
 	  <div class="col-1 text-center border-start ">
