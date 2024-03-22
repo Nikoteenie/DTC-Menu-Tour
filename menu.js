@@ -68,13 +68,12 @@ function back() {
     document.getElementById('txt').innerHTML = slides[cur].info;
     document.getElementById('slide').src = "slide-" + slides[cur].slide + ".jpg";
     document.getElementById('page-modal').textContent = slides[cur].title;
-    localStorage.setItem("cur", cur);
+   
     GLOBAL_CUR = cur;
 }
 
 function reset(){
   GLOBAL_CUR=0;
-    localStorage.setItem("cur", 0);
     document.getElementById('txt').innerHTML = slides[0].info;
     document.getElementById('num').textContent = slides[0].slide;
     document.getElementById('slide').src = "slide-" + slides[0].slide + ".jpg";
@@ -95,11 +94,3 @@ function hideToolTip () {
       document.getElementById("tooltip").style.display = "none";
       document.getElementById("tour-link").style.display = "block";
     }
-var cur = 1;
-
-if (document.getElementById('staticBackdrop')){
-const myModalEl = document.getElementById('staticBackdrop')
-myModalEl.addEventListener('hidden.bs.modal', event => {
- cur=1;
-})
-}
